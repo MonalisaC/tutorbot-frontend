@@ -1,0 +1,3 @@
+export const SEND_MESSAGE = 'SEND_MESSAGE'
+export const RECV_MESSAGE = 'RECV_MESSAGE'
+export const UPDATE_INFO = 'UPDATE_INFO'
