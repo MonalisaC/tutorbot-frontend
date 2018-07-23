@@ -57,6 +57,10 @@
   text-align: right;
 }
 
+.chatroom .chats .chat.hasMoreInfo {
+  cursor: pointer;
+}
+
 .chatroom .chats .chat a {
   text-decoration: none;
   color:#3498DB;
