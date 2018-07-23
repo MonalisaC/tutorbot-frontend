@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import BotImg from '../tutorcuriebot.jpg';
 import './Chatroom.css';
 
 class Message extends React.Component {
@@ -15,16 +16,14 @@ class Message extends React.Component {
   }
 
   render() {
-    var text = "";
-    // var details = ""
-    // var source = ""
+    let text = "";
     if ('messageData' in this.props) {
       const msgData = this.props.messageData;
       text = msgData.text;
-      // if ('extra_data' in msgData && 'answer_data' in msgData.extra_data) {
-      //   details = msgData.extra_data.answer_data.detail
-      //   source = msgData.extra_data.answer_data.source
-      // }
+    }
+    let user = 'you:'
+    if (this.props.user === "bot") {
+      user = <img src={BotImg} alt='bot' />
     }
     return (
       <li className={`chat ${this.props.user === "bot" ? "left" : "right"}`}
@@ -32,9 +31,7 @@ class Message extends React.Component {
         {/* {user !== chat.username
         && <img src={chat.img} alt={`${chat.username}'s profile pic`} />
       } */}
-      {this.props.user}: {text}
-      {/* <div dangerouslySetInnerHTML={{__html: details}}></div>
-      <div>{source}</div> */}
+      {user} {text}
     </li>);
   }
 }
