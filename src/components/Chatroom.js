@@ -6,7 +6,7 @@ class Chatroom extends React.Component {
     render() {
         return (
             <div className="chatroom">
-                <h3>Chat with Tutorbot</h3>
+                <h3>Chat with TutorCurieBot</h3>
                 <MessageList />
                 <MessageInput />
             </div>
