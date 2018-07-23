@@ -20,8 +20,9 @@
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  background-color: black;
+  background-color: #373a3c;
   align-items: center;
+  padding: 5px;
 }
 
 .TopNav a {
