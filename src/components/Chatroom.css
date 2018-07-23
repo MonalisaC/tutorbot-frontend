@@ -39,6 +39,7 @@
   clear: both;
   margin: 10px 0;
   max-width: 200px;
+  text-align: left;
 }
 
 .chatroom .chats .chat img {
@@ -53,6 +54,7 @@
 .chatroom .chats .chat.right {
   float: right;
   clear: both;
+  text-align: right;
 }
 
 .chatroom .chats .chat a {
