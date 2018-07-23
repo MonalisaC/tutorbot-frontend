@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="TopNav">
-            <a href="/"><img src={tutorcuriebotImg} alt="TutorCurieBot"/>TutorCurieBot</a>
+            <a href={config.tutorbotBaseUrl} target="_blank"><img src={tutorcuriebotImg} alt="TutorCurieBot"/>TutorCurieBot</a>
             <a href={config.tutorbotBaseUrl+config.adminEndpoint} target="_blank">Admin</a>
         </div>
         <div className="App-container">
