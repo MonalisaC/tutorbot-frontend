@@ -17,9 +17,18 @@ class MessageList extends React.Component {
 
   updateMoreInfoAndDispatch(msgData, dispatchFunc) {
     if ('extra_data' in msgData && 'answer_data' in msgData.extra_data && msgData.extra_data.answer_data !== '') {
-      const data = {
+      var data = {
         'detail': msgData.extra_data.answer_data.detail,
         'source': msgData.extra_data.answer_data.source,
+      }
+      if ('related_questions' in msgData.extra_data) {
+        data['related_questions'] = msgData.extra_data.related_questions;
+      }
+      if ('tags' in msgData.extra_data) {
+        data['tags'] = msgData.extra_data.tags;
+      }
+      if ('confidence' in msgData.extra_data) {
+        data['confidence'] = msgData.extra_data.confidence;
       }
       dispatchFunc(data)
     }

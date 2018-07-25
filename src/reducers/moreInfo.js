@@ -8,10 +8,7 @@ const initialState = {
 const moreInfo = (state = initialState, action) => {
   switch (action.type) {
     case types.UPDATE_INFO:
-      return {
-          detail: action.detail,
-          source: action.source,
-        };
+      return action.moreInfo;
     default:
       return state
   }

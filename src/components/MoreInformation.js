@@ -15,7 +15,7 @@ class MoreInformation extends React.Component {
       const moreInfo = this.props.moreInfo;
       var detailDiv = <div className="detailintro"><p>
           This is a web app that allows you to talk to TutorCurieBot.<br/>
-          Ask her any type of question 🤔 from about her, jokes to ruby, ruby-on-rails,react and javascript.<br/>
+          Ask her any type of questions 🤔 from about her, jokes, to ruby, ruby-on-rails, react and javascript.<br/>
           Say hello to TutorCurie in English, Spanish, Chinese and Bangla.😁
         </p></div>
       if (moreInfo.detail !== '') {
@@ -23,7 +23,7 @@ class MoreInformation extends React.Component {
       }
       var sourceDiv = <div></div>
       if (moreInfo.source !== '') {
-        sourceDiv = <div className="source"><a href={moreInfo.source} target='_blank'>Source</a></div>
+        sourceDiv = <div className="source"><a href={moreInfo.source} target='_blank'><span>Source</span></a></div>
       }
       return (
           <div className="more">

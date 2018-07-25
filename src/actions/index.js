@@ -23,8 +23,7 @@ const recvMessage = (messageData, author) => ({
 
 const updateInfoInternal = (moreInfo) => ({
   type: types.UPDATE_INFO,
-  detail: moreInfo.detail,
-  source: moreInfo.source,
+  moreInfo: moreInfo,
 })
 
 export function updateInfo(moreInfo) {

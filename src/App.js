@@ -6,9 +6,9 @@ import logotwitterImg from './logo-twitter.png';
 import logolinkedinImg from './logo-linkedin.png';
 import githubImg from './github-mark.png';
 
-
 import { Chatroom } from './containers/Chatroom'
 import { MoreInformation } from './containers/MoreInformation'
+import { Related } from './containers/Related'
 
 import { config } from './config'
 
@@ -24,6 +24,7 @@ class App extends Component {
         <div className="App-container">
           <Chatroom />
           <MoreInformation />
+          <Related />
         </div>
         <footer className="Footer">
           <div><img className="bot" src={tutorcuriebotImg} alt="TutorCurieBot"/> TutorCurieBot © 2018</div>
