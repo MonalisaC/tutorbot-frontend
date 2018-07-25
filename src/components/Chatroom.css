@@ -11,9 +11,10 @@
   /* font-family: 'Pacifico', cursive; */
   /* background-color: rgba(30, 228, 148, 0.5); */
   background-color: rgb(0, 179, 119);
-  color: #FFF;
+  color: rgb(0, 3, 7);
   margin: 0;
   height: 40px;
+  font-family: American Typewriter, serif	;
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -26,6 +27,7 @@
   margin: 10px 0 0;
   height: 510px;
   overflow-y: scroll;
+  font-family: American Typewriter, serif	;
 }
 
 .chatroom .chats .chat {
@@ -55,6 +57,7 @@
   float: right;
   clear: both;
   text-align: right;
+  font-family: American Typewriter, serif	;
 }
 
 .chatroom .chats .chat.hasMoreInfo {
@@ -74,6 +77,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-family: American Typewriter, serif	;
 }
 
 .chatroom .input input[type="text"] {
@@ -102,6 +106,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   background-color: rgb(0, 179, 119);
+  font-family: American Typewriter, serif	;
 }
 
 .chatroom .input input[type="submit"]:hover {
@@ -136,6 +141,7 @@
   list-style: none;
   text-align: left;
   overflow-y: scroll;
+  font-family: American Typewriter, serif	;
 }
 
 .more .detailintro {
@@ -146,10 +152,13 @@
   list-style: none;
   text-align: center;
   overflow-y: scroll;
+  font-family: American Typewriter, serif	;
 }
 
 .more .source {
   text-align: right;
+  font-family: American Typewriter, serif	;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .Footer {
@@ -165,6 +174,7 @@
   height: 3em;
   background-color: rgb(0, 179, 119);
   color: #000;
+  font-family: American Typewriter, serif	;
 }
 
 .Footer .hidden {

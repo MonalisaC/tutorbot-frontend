@@ -23,10 +23,11 @@
   background-color: rgb(255, 217, 102);
   align-items: center;
   padding: 5px;
+  font-family: American Typewriter, serif	;
 }
 
 .TopNav a {
-  color: #FFFFFF;
+  color: rgb(0, 3, 7);
   text-decoration: none;
   display: inherit;
   align-items: center;
