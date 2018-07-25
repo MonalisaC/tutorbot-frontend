@@ -12,16 +12,16 @@ class MessageList extends React.Component {
 
   componentDidUpdate() {
       this.scrollToBottom();
-      this.updateMoreInfo(this.props.messages[this.props.messages.length - 1].messageData)
+      this.updateMoreInfoAndDispatch(this.props.messages[this.props.messages.length - 1].messageData, this.props.dispatch)
   }
 
-  updateMoreInfo(msgData) {
+  updateMoreInfoAndDispatch(msgData, dispatchFunc) {
     if ('extra_data' in msgData && 'answer_data' in msgData.extra_data && msgData.extra_data.answer_data !== '') {
       const data = {
         'detail': msgData.extra_data.answer_data.detail,
-        'source': msgData.extra_data.answer_data.source
+        'source': msgData.extra_data.answer_data.source,
       }
-      this.props.dispatch(data)
+      dispatchFunc(data)
     }
   }
 
@@ -39,7 +39,7 @@ class MessageList extends React.Component {
                     messageData={chat.messageData}
                     user={chat.author}
                     dispatch={this.props.dispatch}
-                    updateMoreInfo={this.updateMoreInfo}
+                    updateMoreInfoAndDispatch={this.updateMoreInfoAndDispatch}
                   />
               ))
           }

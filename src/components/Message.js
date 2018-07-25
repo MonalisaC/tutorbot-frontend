@@ -10,17 +10,6 @@ class Message extends React.Component {
     return ('extra_data' in msgData && 'answer_data' in msgData.extra_data && msgData.extra_data.answer_data !== '')
   }
 
-  updateMoreInfo() {
-    const msgData = this.props.messageData;
-    if (this.hasMoreInfo()) {
-      const data = {
-        'detail': msgData.extra_data.answer_data.detail,
-        'source': msgData.extra_data.answer_data.source
-      }
-      this.props.dispatch(data)
-    }
-  }
-
   render() {
     let text = "";
     if ('messageData' in this.props) {
@@ -33,10 +22,7 @@ class Message extends React.Component {
     }
     return (
       <li className={`chat ${this.props.user === "bot" ? "left" : "right"} ${this.hasMoreInfo() ? "hasMoreInfo" : ""}`}
-        onClick={(e) => this.updateMoreInfo()}>
-        {/* {user !== chat.username
-        && <img src={chat.img} alt={`${chat.username}'s profile pic`} />
-      } */}
+        onClick={(e) => this.props.updateMoreInfoAndDispatch(this.props.messageData, this.props.dispatch)}>
       {user} {text}{this.hasMoreInfo() && '...'}
     </li>);
   }
