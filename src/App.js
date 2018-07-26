@@ -26,6 +26,7 @@ class App extends Component {
           <MoreInformation />
           <Related />
         </div>
+        <div className="PhantomFooter" />
         <footer className="Footer">
           <div><img className="bot" src={tutorcuriebotImg} alt="TutorCurieBot"/> TutorCurieBot © 2018</div>
           <div className="maintainedby">

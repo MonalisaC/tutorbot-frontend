@@ -2,11 +2,12 @@ html {
   background: url("/super.gif") no-repeat center center fixed;
   background-size: cover;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 body {
   margin: 0;
+  /* padding-bottom:50px;   /* Height of the footer */
 }
 
 /* body {
