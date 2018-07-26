@@ -5,9 +5,9 @@ import './Chatroom.css';
 class Related extends React.Component {
     render() {
       const moreInfo = this.props.moreInfo;
-      var relatedQns = <div></div>
+      let relatedQns = <div></div>
       if (moreInfo.related_questions && Array.isArray(moreInfo.related_questions)) {
-        const relatedQuestionsListItems = moreInfo.related_questions.slice(0,5).map((item,i) => <li key={i}>{item}</li>)
+        const relatedQuestionsListItems = moreInfo.related_questions.slice(0, 10).map((item,i) => <li key={i}>{item}</li>)
         relatedQns = <div className="questions">
           <div className="header">Related Questions</div>
           <div className="items"><ul>{relatedQuestionsListItems}</ul></div>
